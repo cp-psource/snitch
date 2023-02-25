@@ -32,7 +32,13 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=snitch', 
+	__FILE__, 
+	'snitch' 
+);
 /* Quit */
 defined( 'ABSPATH' ) || exit;
 
